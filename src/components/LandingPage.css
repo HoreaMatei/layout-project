@@ -1,0 +1,14 @@
+.landing_page {
+  height: 200vh; /* Ensure enough scrollable area */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.scrolling-text {
+  font-size: 2rem;
+  white-space: nowrap;
+
+  color: white;
+}

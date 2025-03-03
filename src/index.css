@@ -1,0 +1,18 @@
+@import url("https://fonts.cdnfonts.com/css/coolvetica");
+
+@import "tailwindcss";
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.cool {
+  letter-spacing: -70px;
+  /* font-family: "roboto"; */
+  /* font-family: "roboto", sans-serif; */
+}
