@@ -1,9 +1,12 @@
 // import { stylesWithCssVar } from "@/utils/motion";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import "./LandingPage.css";
+import "../components/LandingPage.css";
+import Button from "../components/Button";
+import AboutUsComponent from "../components/AboutUsComponent";
+import HeaderImagesDiv from "../components/HeaderImagesDiv";
 
-export const StreamlinedExperience = () => {
+export const Landing = () => {
   window.addEventListener(
     "wheel",
     function (event) {
@@ -39,28 +42,7 @@ export const StreamlinedExperience = () => {
       ref={targetRef}
       className="mt-[50vh] flex h-[120vh] items-start justify-center z-0 "
     >
-      <div>
-        <img
-          src="./redbg.avif"
-          className="absolute top-16 left-94 z-10 w-[42vw] lg:w-[17vw] lg:h-[19vw]  object-cover "
-          alt="pic"
-        />
-        <img
-          src="./bgpic1.avif"
-          className="absolute z-10 top-50 right-46 w-[11vw]"
-          alt="pic"
-        />
-        <img
-          src="./bgpic2.avif"
-          alt="pic"
-          className="lg:w-[22vw] lg:h-[25vw] absolute  left-16 "
-        />
-        <img
-          src="./bgpic3.avif"
-          alt="pic"
-          className="absolute right-110 w-[15vw] h-[38vh] top-160"
-        />
-      </div>
+      <HeaderImagesDiv />
 
       <motion.div
         className=" w-[100vw] relative z-10   flex flex-col gap-[20vw]  align-baseline justify-center items-center"
@@ -83,40 +65,18 @@ export const StreamlinedExperience = () => {
           style={{ y: descriptionY }}
           className="bg-black pt-24 z-20 ml-200 relative w-[100vw] h-[90vh] text-center"
         >
-          <p className="  lg:w-[36vw] lg:m-auto lg:mt-10 text-white text-3xl text-center z-10 leading-14 font-bold">
-            Line Studio® is a versatile creative studio specializing in
-            Branding, Web Design, and Development. We empower clients to elevate
-            their brands, expand their reach, and distinguish themselves in
-            their industry through impactful solutions and innovative design.
-          </p>
-
+          <AboutUsComponent />
           <motion.div
             style={{
               boxShadow: "-120px 0 70px rgba(0, 0, 0, 1)",
               x: fadeInDivx,
               y: "-20%",
             }}
-            className="lg:w-[45vw] m-auto relative z-40 h-[45vh] mt-[-30vh]  bg-red-400"
+            className="lg:w-[45vw] m-auto relative z-40 h-[40vh] mt-[-30vh]  bg-black"
           ></motion.div>
+          <Button className="mt-[-80px]" />
         </motion.div>
       </motion.div>
-
-      {/* <motion.div
-        className="relative  z-10 bg-black  w-[100vw]"
-        style={{ y: textY }}
-      >
-        <p className="text-red-500 text-[3vh] w-[40%] m-auto z-50">
-          Line Studio® is a versatile creative studio specializing in Branding,
-          Web Design, and Development. We empower clients to elevate their
-          brands, expand their reach, and distinguish themselves in their
-          industry through impactful solutions and innovative design.
-        </p>
-        <button className="uppercase">About us</button>
-      </motion.div> */}
-
-      {/* <motion.div style={{ y: textY }} className="relative  z-1 bg-black ">
-        <div className="w-[100vw] ">hi</div>
-      </motion.div> */}
 
       <div className="sticky top-1/2 left-1/2 min-h-[50rem] min-w-[50rem] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap before:absolute before:inset-0    ">
         <motion.p

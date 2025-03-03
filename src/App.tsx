@@ -1,14 +1,13 @@
 import "./App.css";
 import LandingPage from "./components/LandingPage";
 import Navbar from "./components/Navbar";
-import { StreamlinedExperience } from "./components/StreamlinedExperience";
-import About from "./sections/About";
+import { Landing } from "./sections/Landing";
 
 const App: React.FC = () => {
   return (
     <>
       <Navbar />
-      <StreamlinedExperience />
+      <Landing />
     </>
   );
 };
