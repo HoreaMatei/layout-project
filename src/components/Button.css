@@ -6,6 +6,9 @@
   font-family: sans-serif;
   perspective: 1000px;
 
+  width: 150px;
+  min-width: fit-content;
+
   height: 50px;
   margin-bottom: 0;
   background: #2018bf;
@@ -21,7 +24,7 @@
 
 .btn-div span {
   min-width: fit-content;
-  width: 140px;
+  width: 150px;
 
   padding: 14px;
 

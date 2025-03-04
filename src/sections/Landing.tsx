@@ -1,30 +1,43 @@
 // import { stylesWithCssVar } from "@/utils/motion";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import "../components/LandingPage.css";
 import Button from "../components/Button";
 import AboutUsComponent from "../components/AboutUsComponent";
 import HeaderImagesDiv from "../components/HeaderImagesDiv";
 
-export const Landing = () => {
-  window.addEventListener(
-    "wheel",
-    function (event) {
-      event.preventDefault();
-      window.scrollBy({
-        top: event.deltaY * 0.15, // Adjust this multiplier to control speed
-        behavior: "smooth",
-      });
-    },
-    { passive: false }
-  );
+export const Landing: React.FC = () => {
+  const targetRef = useRef<HTMLDivElement | null>(null); // Create ref for Landing section
 
-  const targetRef = useRef<HTMLDivElement | null>(null);
+  // Handle scroll speed specifically for this component
+  useEffect(() => {
+    const handleWheel = (event: WheelEvent) => {
+      if (
+        targetRef.current &&
+        targetRef.current.contains(event.target as Node)
+      ) {
+        // If the scroll is within the target (Landing section), modify the scroll speed
+        event.preventDefault();
+        window.scrollBy({
+          top: event.deltaY * 0.2, // Adjust this multiplier for scroll speed
+          behavior: "smooth",
+        });
+      }
+    };
+
+    // Add the wheel event listener to the window
+    window.addEventListener("wheel", handleWheel, { passive: false });
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start end", "end end"],
   });
-
   const fadeInDivx = useTransform(
     scrollYProgress,
     [0.1, 1.1],
@@ -45,7 +58,7 @@ export const Landing = () => {
       <HeaderImagesDiv />
 
       <motion.div
-        className=" w-[100vw] relative z-10   flex flex-col gap-[20vw]  align-baseline justify-center items-center"
+        className=" w-[100vw] relative z-10  flex flex-col gap-[20vw]  align-baseline justify-center items-center"
         style={{ y: textY }}
       >
         <div className="relative items-center justify-center  flex flex-row w-[100vw] gap-[20vw] ">
@@ -63,7 +76,7 @@ export const Landing = () => {
         </div>
         <motion.div
           style={{ y: descriptionY }}
-          className="bg-black pt-24 z-20 ml-200 relative w-[100vw] h-[90vh] text-center"
+          className="bg-black pt-24 z-20 ml-200 relative w-[100vw] h-[90vh] text-center overflow-hidden"
         >
           <AboutUsComponent />
           <motion.div
@@ -74,7 +87,7 @@ export const Landing = () => {
             }}
             className="lg:w-[45vw] m-auto relative z-40 h-[40vh] mt-[-30vh]  bg-black"
           ></motion.div>
-          <Button className="mt-[-80px]" />
+          <Button text="about us" className="mt-[-80px]" />
         </motion.div>
       </motion.div>
 
