@@ -5,17 +5,16 @@ const WorkingWithSection: React.FC = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start end", "end end"],
+    offset: ["start end", "end start"],
   });
 
   const fadeInDivx = useTransform(
     scrollYProgress,
-    [0.4, 1.2],
-    ["-20%", "140%"]
+    [0.1, 0.6],
+    ["-10%", "140%"]
   );
   return (
     <motion.section
-      ref={targetRef}
       className="mt-36 w-[100vw] flex flex-col items-center justify-center align-ce
     "
     >
@@ -24,7 +23,10 @@ const WorkingWithSection: React.FC = () => {
         className="h-50 rounded-full w-50 object-cover object-center"
         alt="headshot"
       />
-      <div className="w-[71vw] border-b-1 text-white relative m-auto mt-10 ">
+      <div
+        ref={targetRef}
+        className="w-[71vw] border-b-1 text-white relative m-auto mt-10 "
+      >
         <p className="  text-white w-[60vw] text-center text-8xl m-auto mb-24">
           "Working with LINE Studio was an exceptional experience from start to
           finish."

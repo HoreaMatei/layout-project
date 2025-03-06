@@ -8,7 +8,7 @@ type Props = {
 const Button: React.FC<Props> = ({ className, text }) => {
   return (
     <a className={`btn-div ${className} `} href="#">
-      <span className="uppercase " data-hover={text}>
+      <span className={`uppercase text-center ${className}`} data-hover={text}>
         {text}
       </span>
     </a>

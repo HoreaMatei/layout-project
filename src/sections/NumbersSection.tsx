@@ -1,24 +1,24 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import Button from "../components/Button";
-import ExpertiseText from "../components/ExpertiseText";
+
 const NumbersSection: React.FC = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start end", "end end"],
+    offset: ["start end", "end start"],
   });
 
-  const fadeInDivx = useTransform(
+  const fadeInNumbersDiv = useTransform(
     scrollYProgress,
-    [0.4, 1.2],
-    ["-10%", "230%"]
+
+    [0.1, 0.5],
+    ["1%", "160%"]
   );
 
-  const fadeInTextx = useTransform(scrollYProgress, [0.8, 1.2], ["1%", "240%"]);
+  const fadeInTextx = useTransform(scrollYProgress, [0.1, 0.2], ["1%", "520%"]);
 
   return (
-    <div className="flex flex-col items-center w-[100vw] h-[100vh] ">
+    <div className="flex flex-col items-center w-[100vw] h-[40vh] ">
       <motion.section className="w-[70vw] relative m-auto h-[60vh]  items-center justify-between flex flex-col ">
         <div className="flex flex-row gap-40" ref={targetRef}>
           {" "}
@@ -31,7 +31,7 @@ const NumbersSection: React.FC = () => {
               <motion.div
                 style={{
                   boxShadow: "-120px 0 70px rgba(0, 0, 0, 1)",
-                  x: fadeInDivx,
+                  x: fadeInNumbersDiv,
                   y: "-10%",
                 }}
                 className="lg:w-[300px]  z-40 h-[30vh]   bg-black"
@@ -47,10 +47,10 @@ const NumbersSection: React.FC = () => {
               <motion.div
                 style={{
                   boxShadow: "-120px 0 70px rgba(0, 0, 0, 1)",
-                  x: fadeInDivx,
+                  x: fadeInNumbersDiv,
                   y: "-10%",
                 }}
-                className="lg:w-[350px]  z-40 h-[30vh]   bg-black"
+                className="lg:w-[330px]  z-40 h-[30vh]   bg-black"
               ></motion.div>
             </div>
           </div>
@@ -63,7 +63,7 @@ const NumbersSection: React.FC = () => {
               <motion.div
                 style={{
                   boxShadow: "-120px 0 70px rgba(0, 0, 0, 1)",
-                  x: fadeInDivx,
+                  x: fadeInNumbersDiv,
                   y: "-10%",
                 }}
                 className="lg:w-[300px]  z-40 h-[30vh]   bg-black"
@@ -71,7 +71,7 @@ const NumbersSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <ExpertiseText />
+        {/* <ExpertiseText /> */}
         {/* <div
           ref={targetRef}
           className="flex flex-col  items-center justify-between h-[25vh] "

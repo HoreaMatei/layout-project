@@ -6,22 +6,22 @@ const ExpertiseText: React.FC = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start end", "end end"],
+    offset: ["start end", "end start"],
   });
 
   const fadeInTextx = useTransform(
     scrollYProgress,
-    [0.4, 1.2],
-    ["-10%", "230%"]
+    [0.1, 0.7],
+    ["-1%", "230%"]
   );
 
   return (
     <motion.section
       ref={targetRef}
-      className="flex flex-col  items-center justify-between h-[25vh] "
+      className="flex flex-col  items-center justify-between h-[20vh] "
     >
       <div className="relative lg:w-[40vw]">
-        <p className="text-white text-5xl lg:w-[40vw] text-center">
+        <p className="text-white text-4xl lg:w-[40vw] text-center">
           Our expertise is in designing visuals that effectively connect with
           the target audience.
         </p>

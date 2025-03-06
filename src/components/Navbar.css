@@ -32,7 +32,8 @@
   background: transparent;
   gap: 5px;
   color: white;
-  margin-right: 4vw;
+  margin-right: 3vw;
+  margin-top: 30px;
 }
 
 .navigation_buttons:hover {
