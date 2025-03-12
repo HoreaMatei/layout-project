@@ -1,6 +1,9 @@
 import "./App.css";
+import AnimatedImageGrid from "./components/AnimatedImageGrid";
+
+import ContactComponent from "./components/ContactComponent";
 import ExpertiseText from "./components/ExpertiseText";
-import LandingPage from "./components/LandingPage";
+
 import MovingTextComponent from "./components/MovingTextComponent";
 import Navbar from "./components/Navbar";
 import BannersSection from "./sections/BannersSection";
@@ -27,7 +30,7 @@ const App: React.FC = () => {
       <LatestTipsSection />
       <MovingTextComponent />
 
-      <ExpertiseText />
+      <ContactComponent />
     </div>
   );
 };

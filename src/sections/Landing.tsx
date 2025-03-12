@@ -5,6 +5,7 @@ import "../components/LandingPage.css";
 import Button from "../components/Button";
 import AboutUsComponent from "../components/AboutUsComponent";
 import HeaderImagesDiv from "../components/HeaderImagesDiv";
+import AnimatedImageGrid from "../components/AnimatedImageGrid";
 
 export const Landing: React.FC = () => {
   const targetRef = useRef<HTMLDivElement | null>(null); // Create ref for Landing section
@@ -79,6 +80,7 @@ export const Landing: React.FC = () => {
           className="bg-black pt-24 z-20 ml-200 relative w-[100vw] h-[90vh] text-center overflow-hidden"
         >
           <AboutUsComponent />
+
           <motion.div
             style={{
               boxShadow: "-120px 0 70px rgba(0, 0, 0, 1)",
@@ -88,6 +90,10 @@ export const Landing: React.FC = () => {
             className="lg:w-[45vw] m-auto relative z-40 h-[40vh] mt-[-30vh]  bg-black"
           ></motion.div>
           <Button text="about us" className="mt-[-80px] " />
+
+          <div className=" w-[60vw] m-auto  h-[25vh] mt-40 flex justify-center align content-center  ">
+            <AnimatedImageGrid />
+          </div>
         </motion.div>
       </motion.div>
 

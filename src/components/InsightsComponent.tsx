@@ -8,11 +8,13 @@ const InsightsComponent: React.FC = () => {
   return (
     <div className="w-[80vw]">
       <div className=" relative flex flex-col gap-6 group cursor-pointer ">
-        <img
-          src={imgUrl}
-          alt="image"
-          className="lg:w-[26vw] object-cover lg:h-[300px]"
-        />
+        <div className="lg:w-[26vw] overflow-hidden  ">
+          <img
+            src={imgUrl}
+            alt="image"
+            className=" transition-transform duration-300 ease-in-out transform hover:scale-110 overflow-hidden lg:w-[26vw] object-cover lg:h-[300px]"
+          />
+        </div>
         <div className=" flex flex-col gap-2">
           {" "}
           <div className="flex flex-row gap-5 text-[#979797] ">
