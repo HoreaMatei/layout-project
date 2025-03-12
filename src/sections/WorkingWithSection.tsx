@@ -25,7 +25,7 @@ const WorkingWithSection: React.FC = () => {
       />
       <div
         ref={targetRef}
-        className="w-[71vw] border-b-1 text-white relative m-auto mt-10 "
+        className="w-[70vw] border-b-1 text-white relative m-auto mt-10 "
       >
         <p className="  text-white w-[60vw] text-center text-8xl m-auto mb-24">
           "Working with LINE Studio was an exceptional experience from start to

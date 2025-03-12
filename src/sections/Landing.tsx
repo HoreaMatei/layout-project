@@ -1,6 +1,6 @@
 // import { stylesWithCssVar } from "@/utils/motion";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "../components/LandingPage.css";
 import Button from "../components/Button";
 import AboutUsComponent from "../components/AboutUsComponent";
@@ -87,14 +87,14 @@ export const Landing: React.FC = () => {
             }}
             className="lg:w-[45vw] m-auto relative z-40 h-[40vh] mt-[-30vh]  bg-black"
           ></motion.div>
-          <Button text="about us" className="mt-[-80px]" />
+          <Button text="about us" className="mt-[-80px] " />
         </motion.div>
       </motion.div>
 
       <div className="sticky top-1/2 left-1/2 min-h-[50rem] min-w-[50rem] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap before:absolute before:inset-0    ">
         <motion.p
           aria-hidden
-          style={{ x: textX, y: "-50%" }}
+          style={{ x: textX, y: "-60%" }}
           className="font-thin font-roboto  cool  whitepspace-nowrap text-white min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] text-[30vw]  "
         >
           DIGITAL CREATIVE STUDIO

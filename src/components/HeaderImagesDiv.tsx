@@ -3,7 +3,7 @@ const HeaderImagesDiv = () => {
     <div>
       <img
         src="./redbg.avif"
-        className="absolute top-16 left-94 z-10 w-[42vw] lg:w-[17vw] lg:h-[19vw]  object-cover "
+        className="absolute top-16 left-94 z-10 w-[42vw] lg:w-[16vw] lg:h-[19vw]  object-cover "
         alt="pic"
       />
       <img

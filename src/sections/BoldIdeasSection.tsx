@@ -3,23 +3,8 @@ import { useRef } from "react";
 import RevealOnScroll from "../Reveal-comp/RevealOnScroll";
 
 export const BoldIdeasSection: React.FC = () => {
-  const targetRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start end", "end start"],
-  });
-
-  const fadeInTexty = useTransform(
-    scrollYProgress,
-
-    [0.1, 0.5],
-    ["10%", "-160%"]
-  );
   return (
-    <div
-      ref={targetRef}
-      className=" flex flex-col text-[30vh] text-center  uppercase m-auto w-[94vw]"
-    >
+    <div className=" flex flex-col text-[30vh] text-center  uppercase m-auto w-[94vw]">
       <RevealOnScroll>
         <p className="">Straight</p>
       </RevealOnScroll>
