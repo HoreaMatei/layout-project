@@ -4,6 +4,7 @@ interface InsightContextType {
   date: string;
   readTime: string;
   title: string;
+  imgUrl: string;
 }
 
 const InsightContext = createContext<InsightContextType | undefined>(undefined);

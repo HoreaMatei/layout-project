@@ -4,7 +4,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        coolvetica: ["Coolvetica", "sans-serif"],
+        oswald: ["Oswald", "sans-serif"],
       },
     },
   },

@@ -34,13 +34,13 @@ const AnimatedImageGrid: React.FC = () => {
       setActiveIndexes((prevIndexes) =>
         prevIndexes.map((index) => (index + 1) % images.length)
       );
-    }, 4000); // Change every 3 seconds
+    }, 4000); // Change every 4 seconds
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className=" m-auto z-50 grid grid-cols-4 grid-rows-2 gap-5 text-center gap-y-14 w-[90vw] max-w-4xl m-auto">
+    <div className="  z-50 grid grid-cols-4 grid-rows-2 gap-5 text-center gap-y-14 w-[90vw] max-w-4xl ">
       {activeIndexes.map((index, i) => (
         <div
           key={i}
@@ -51,10 +51,10 @@ const AnimatedImageGrid: React.FC = () => {
               key={index}
               src={images[index]}
               alt={`Image ${index + 1}`}
-              className="gridImage absolute inset-0 m-auto w-[100px] h-full object-cover"
+              className="gridImage absolute left-15 inset-0 w-[100px] h-full object-cover"
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: "0%", opacity: 1 }}
-              exit={{ y: "-100%", opacity: 1 }}
+              exit={{ y: "-100%", opacity: 0 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
             />
           </AnimatePresence>

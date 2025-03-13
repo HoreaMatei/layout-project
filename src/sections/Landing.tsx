@@ -1,4 +1,3 @@
-// import { stylesWithCssVar } from "@/utils/motion";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import "../components/LandingPage.css";
@@ -101,7 +100,7 @@ export const Landing: React.FC = () => {
         <motion.p
           aria-hidden
           style={{ x: textX, y: "-60%" }}
-          className="font-thin font-roboto  cool  whitepspace-nowrap text-white min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] text-[30vw]  "
+          className=" whitepspace-nowrap tracking-tighter  text-white min-w-screen absolute top-1/2 left-[calc(-50vw+25rem)] text-[25vw]  "
         >
           DIGITAL CREATIVE STUDIO
         </motion.p>

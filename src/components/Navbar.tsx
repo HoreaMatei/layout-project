@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <div className="navbar_main_div">
+    <div className="navbar_main_div   ">
       <img className="nav_img" src="/logo.avif" alt="logo" />
       <div className="navigation_buttons">
         <Link className="nav-link" to="/">
