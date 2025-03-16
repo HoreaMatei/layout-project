@@ -1,7 +1,12 @@
+import clsx from "clsx";
 import { useBanner } from "../hooks/useBannerContext";
 import Button from "./Button";
 
-const Banner: React.FC = () => {
+interface BannerProps {
+  className?: string;
+}
+
+const Banner: React.FC<BannerProps> = ({ className }) => {
   const { title, leftText, rightText, buttonText, image } = useBanner();
   return (
     <div
@@ -11,7 +16,10 @@ const Banner: React.FC = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="text-white w-[75vw] flex justify-center flex-col align-middle items-center gap-8 m-auto mt-4 bg-blue-400 h-[80vh]  relative"
+      className={clsx(
+        "text-white flex justify-center flex-col align-middle items-center gap-8 m-auto mt-4    relative",
+        className
+      )}
     >
       <p className="absolute left-10 top-10 text-xl">{leftText}</p>
       <p className="absolute top-10 text-xl right-10">{rightText} </p>

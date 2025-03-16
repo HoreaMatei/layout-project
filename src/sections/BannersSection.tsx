@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Banner from "../components/Banner";
 import { BannerProvider } from "../hooks/useBannerContext";
 
@@ -39,12 +40,20 @@ const bannersData = [
   },
 ];
 
-const BannersSection: React.FC = () => {
+interface BannerSectionProps {
+  subClassName: string;
+  className: string;
+}
+
+const BannersSection: React.FC<BannerSectionProps> = ({
+  subClassName,
+  className,
+}) => {
   return (
-    <div className="w-[100vw] z-40 text-center ">
+    <div className={clsx(" z-40 text-center  ", className)}>
       {bannersData.map((banner, index) => (
         <BannerProvider key={index} value={banner}>
-          <Banner />
+          <Banner className={subClassName} />
         </BannerProvider>
       ))}
     </div>

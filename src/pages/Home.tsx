@@ -15,7 +15,10 @@ const Home: React.FC = () => {
   return (
     <div className="">
       <Landing />
-      <BannersSection />
+      <BannersSection
+        className="w-[100vw]"
+        subClassName="w-[75vw] flex flex-wrap h-[80vh] "
+      />
       <WorkingWithSection />
 
       <NumbersSection />
