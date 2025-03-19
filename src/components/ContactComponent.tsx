@@ -43,7 +43,7 @@ const DataArray = [
 
 const ContactComponent: React.FC = () => {
   return (
-    <div className="flex flex-row ">
+    <div className="flex flex-row tracking-wider ">
       <div className=" w-[100vw] p-10 flex flex-row">
         <div className="flex flex-row w-[20vw] m-auto gap-20 ">
           {DataArray.map((group, index) => (

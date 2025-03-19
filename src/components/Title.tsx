@@ -1,21 +1,28 @@
+import clsx from "clsx";
 import React from "react";
 
 interface TitleProps {
   text: string;
+  className: string;
 }
 
-const Title: React.FC<TitleProps> = ({ text }) => {
+const Title: React.FC<TitleProps> = ({ text, className }) => {
   return (
-    <div className="sticky top-0 ">
+    <div className="sticky top-0 z-0  ">
       <div className="">
         <div className="relative flex ">
-          <h1 className="text-[48vh] tracking-tighter  m-auto mt-10 uppercase">
+          <h1
+            className={clsx(
+              " tracking-tighter  m-auto mt-10 uppercase",
+              className
+            )}
+          >
             {text}
           </h1>
           <img
             src="/bgpic1.avif"
             alt="bg-img"
-            className="h-72 absolute right-20 top-20"
+            className="h-40 md:h-52 lg:h-72 absolute right-1 lg:right-20 top-20"
           />
         </div>
       </div>

@@ -12,7 +12,7 @@ import ContactComponent from "../../components/ContactComponent";
 const About: React.FC = () => {
   return (
     <div>
-      <Title text="about" />
+      <Title className="text-[48vh] h-[90vh]" text="about" />
       <div
         className="
       pt-40 w-screen relative h-[100vh] bg-black z-10"

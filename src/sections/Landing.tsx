@@ -19,7 +19,7 @@ export const Landing: React.FC = () => {
         // If the scroll is within the target (Landing section), modify the scroll speed
         event.preventDefault();
         window.scrollBy({
-          top: event.deltaY * 0.2, // Adjust this multiplier for scroll speed
+          top: event.deltaY * 0.4, // Adjust this multiplier for scroll speed
           behavior: "smooth",
         });
       }
@@ -88,7 +88,7 @@ export const Landing: React.FC = () => {
             }}
             className="lg:w-[45vw] m-auto relative z-40 h-[40vh] mt-[-30vh]  bg-black"
           ></motion.div>
-          <Button text="about us" className="mt-[-80px] " />
+          <Button linkTo="/about" text="about us" className="mt-[-80px] " />
 
           <div className=" w-[60vw] m-auto  h-[25vh] mt-40 flex justify-center align content-center  ">
             <AnimatedImageGrid />

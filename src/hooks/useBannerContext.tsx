@@ -6,6 +6,7 @@ interface BannerContextType {
   rightText: string;
   buttonText: string;
   image: string;
+  linkTo: string;
 }
 
 const BannerContext = createContext<BannerContextType | undefined>(undefined);

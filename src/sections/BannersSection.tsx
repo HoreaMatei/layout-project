@@ -9,6 +9,7 @@ const bannersData = [
     rightText: "CSS Award",
     buttonText: "View More",
     image: "/bannerImages/bigBg1.avif",
+    linkTo: "projects/creative-pulse1",
   },
   {
     title: "Design Surge",
@@ -16,6 +17,7 @@ const bannersData = [
     rightText: "Awwwards",
     buttonText: "View More",
     image: "/bannerImages/bigBg2.avif",
+    linkTo: "projects/design-surge",
   },
   {
     title: "Vision Craft",
@@ -23,6 +25,7 @@ const bannersData = [
     rightText: "Awwwards",
     buttonText: "View More",
     image: "/bannerImages/bigBg3.avif",
+    linkTo: "projects/vision-craft",
   },
   {
     title: "Brand Bloom",
@@ -30,6 +33,7 @@ const bannersData = [
     rightText: "CSS Award",
     buttonText: "View More",
     image: "/bannerImages/bigBg4.avif",
+    linkTo: "projects/brand-bloom",
   },
   {
     title: "Impact Edge",
@@ -37,6 +41,7 @@ const bannersData = [
     rightText: "CSS Award",
     buttonText: "View More",
     image: "/bannerImages/bigBg5.avif",
+    linkTo: "projects/impact-edge",
   },
 ];
 

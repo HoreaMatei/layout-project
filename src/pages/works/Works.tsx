@@ -6,8 +6,8 @@ import ContactComponent from "../../components/ContactComponent";
 
 const Works: React.FC = () => {
   return (
-    <div>
-      <Title text="works" />
+    <div className="">
+      <Title className="text-[48vh] h-[90vh]" text="works" />
 
       <div className="relative w-screen bg-black pt-40">
         <BannersSection

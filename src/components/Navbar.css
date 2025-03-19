@@ -37,6 +37,7 @@
   color: white;
   margin-right: 3vw;
   margin-top: 30px;
+
   cursor: pointer;
 }
 
@@ -105,4 +106,10 @@
 .nav-link:hover span:before,
 .nav-link:focus span:before {
   color: white;
+}
+
+@media (max-width: 1000px) {
+  .navigation_buttons {
+    display: none;
+  }
 }

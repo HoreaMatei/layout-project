@@ -7,7 +7,7 @@ interface BannerProps {
 }
 
 const Banner: React.FC<BannerProps> = ({ className }) => {
-  const { title, leftText, rightText, buttonText, image } = useBanner();
+  const { title, leftText, rightText, buttonText, image, linkTo } = useBanner();
   return (
     <div
       style={{
@@ -24,7 +24,7 @@ const Banner: React.FC<BannerProps> = ({ className }) => {
       <p className="absolute left-10 top-10 text-xl">{leftText}</p>
       <p className="absolute top-10 text-xl right-10">{rightText} </p>
       <p className="uppercase text-8xl mt-10">{title} </p>
-      <Button text={buttonText} className="absolute" />
+      <Button linkTo={linkTo} text={buttonText} className="absolute" />
     </div>
   );
 };
