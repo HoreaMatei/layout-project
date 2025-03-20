@@ -8,7 +8,7 @@ interface TitleProps {
 
 const Title: React.FC<TitleProps> = ({ text, className }) => {
   return (
-    <div className="sticky top-0 z-0  ">
+    <div className="sticky top-20 z-0  ">
       <div className="">
         <div className="relative flex ">
           <h1

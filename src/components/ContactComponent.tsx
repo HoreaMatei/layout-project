@@ -50,12 +50,6 @@ const ContactComponent: React.FC = () => {
             <div key={index} className="flex flex-col gap-1.5">
               <h1 className="text-2xl text-stone-500 mb-4">{group.category}</h1>
               {group.items.map((item, subIndex) => (
-                // <div className="group ">
-                //   <p className="text-2xl underline1 group" key={subIndex}>
-                //     {item.name}
-                //     <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
-                //   </p>
-                // </div>
                 <p
                   key={subIndex}
                   className="relative text-2xl group whitespace-nowrap cursor-pointer  "

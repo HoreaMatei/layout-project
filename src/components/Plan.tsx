@@ -42,7 +42,11 @@ const Plan: React.FC<PlanProps> = ({ imgUrl, index }) => {
             <MediaComponent />
           </div>
 
-          <Button text="explore plans" className="w-[200px] text-center" />
+          <Button
+            linkTo="/plans"
+            text="explore plans"
+            className="w-[200px] text-center"
+          />
         </div>
       </div>
     </div>
