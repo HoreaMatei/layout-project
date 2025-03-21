@@ -17,7 +17,7 @@ const Banner: React.FC<BannerProps> = ({ className }) => {
         backgroundRepeat: "no-repeat",
       }}
       className={clsx(
-        "text-white flex justify-center flex-col align-middle items-center gap-8 m-auto mt-4    relative",
+        "bg-local text-white flex justify-center flex-col align-middle items-center gap-8 m-auto mt-4    relative",
         className
       )}
     >

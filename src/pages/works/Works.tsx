@@ -9,18 +9,22 @@ const Works: React.FC = () => {
     <div className="">
       <Title className="text-[48vh] h-[90vh]" text="works" />
 
-      <div className="relative w-screen bg-black pt-40">
-        <BannersSection
-          subClassName="w-[38vw] h-[70vh] "
-          className="w-[78vw]   m-auto grid grid-cols-2 "
-        />
-      </div>
+      <div className="relative  bg-black">
+        <div className="relative w-screen bg-black pt-40">
+          <BannersSection
+            subClassName="w-[38vw] h-[70vh] "
+            className="w-[78vw]   m-auto grid grid-cols-2 "
+          />
+        </div>
 
-      <div className="lg:pt-40 mb-10 bg-black relative">
-        <MovingTextComponent />
-      </div>
+        <div className="lg:pt-40 mb-10 bg-black relative">
+          <MovingTextComponent />
+        </div>
 
-      <ContactComponent />
+        <div className="pt-5 mt-0 relative bg-black">
+          <ContactComponent />
+        </div>
+      </div>
     </div>
   );
 };

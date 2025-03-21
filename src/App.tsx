@@ -13,6 +13,7 @@ import CreativePulse from "./projects/DynamicProjectsPage";
 import DynamicProjectsPage from "./projects/DynamicProjectsPage";
 import Plans from "./pages/plans/Plans";
 import GrowthPackage from "./pages/plans/GrowthPackage";
+import Contact from "./pages/Contact";
 
 const App: React.FC = () => {
   return (
@@ -22,13 +23,14 @@ const App: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/works" element={<Works />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/growth-package" element={<GrowthPackage />} />
 
         <Route path="/projects/creative-pulse" element={<CreativePulse />} />
         {/* 
         <Route path="/contact" element={<Contact />} /> */}
         <Route path="/projects/:pageId" element={<DynamicProjectsPage />} />
-        {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
+        <Route path="*" element={<Navigate to="/" replace />} />
         <Route path="/plans" element={<Plans />} />
       </Routes>
     </Router>

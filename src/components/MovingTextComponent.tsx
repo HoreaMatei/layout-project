@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Bar: React.FC = () => {
   return (
@@ -10,8 +11,12 @@ const Bar: React.FC = () => {
 };
 
 const MovingTextComponent: React.FC = () => {
+  const navigate = useNavigate();
   return (
-    <div className="uppercase cursor-pointer relative overflow-hidden w-full hover:text-black hover:bg-white h-[50vh] flex items-center bg-black text-white">
+    <div
+      onClick={() => navigate("/contact")}
+      className="uppercase cursor-pointer relative overflow-hidden w-full hover:text-black hover:bg-white h-[50vh] flex items-center bg-black text-white"
+    >
       <motion.div
         className="tracking-tighter flex space-x-10 text-[42vh] whitespace-nowrap w-max"
         animate={{ x: ["0%", "-50%"] }}

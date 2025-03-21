@@ -203,7 +203,7 @@ const DynamicProjectsPage: React.FC = () => {
 
   return (
     <div className="text-white tracking-wider">
-      <Title className="lg:text-[26vh] h-[50vh]" text="Creative Pulse" />
+      <Title className="lg:text-[26vh] h-[50vh]" text={pageData.title} />
 
       <div className="bg-black w-screen relative pt-3">
         <div
