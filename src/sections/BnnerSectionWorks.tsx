@@ -1,8 +1,9 @@
 import clsx from "clsx";
 import Banner from "../components/Banner";
 import { BannerProvider } from "../hooks/useBannerContext";
+import WorksBanner from "../components/WorksBanner";
 
-export const bannersData = [
+const bannersData = [
   {
     title: "Creative Pulse",
     leftText: "UI, UX, Development",
@@ -50,7 +51,7 @@ interface BannerSectionProps {
   className: string;
 }
 
-const BannersSection: React.FC<BannerSectionProps> = ({
+const BannersSectionWorks: React.FC<BannerSectionProps> = ({
   subClassName,
   className,
 }) => {
@@ -58,11 +59,11 @@ const BannersSection: React.FC<BannerSectionProps> = ({
     <div className={clsx(" z-40 text-center  ", className)}>
       {bannersData.map((banner, index) => (
         <BannerProvider key={index} value={banner}>
-          <Banner className={subClassName} />
+          <WorksBanner className={subClassName} />
         </BannerProvider>
       ))}
     </div>
   );
 };
 
-export default BannersSection;
+export default BannersSectionWorks;

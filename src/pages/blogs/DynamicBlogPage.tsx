@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useParams } from "react-router-dom";
 import Title from "../../components/Title";
 import MovingTextComponent from "../../components/MovingTextComponent";
 import ContactComponent from "../../components/ContactComponent";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 type PageData = {
   id: string; // Unique ID for each page
@@ -92,6 +93,14 @@ const data: PageData[] = [
   },
 ];
 const DynamicBlogPage = () => {
+  const targetRef = useRef<HTMLDivElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"],
+  });
+
+  const fadeInTextx = useTransform(scrollYProgress, [0.6, 0.9], ["-1%", "30%"]);
+
   const { pageId } = useParams<{ pageId: string }>();
   const pageData = data.find((item) => item.id === pageId);
 
@@ -105,13 +114,26 @@ const DynamicBlogPage = () => {
         text={pageData.title}
       />
       <div className="bg-black w-screen relative pt-5 flex flex-col gap-5">
-        <div className=" lg:w-[95vw] lg:h-[75vh] m-auto overflow-hidden ">
-          <img
-            src={pageData.image1}
-            alt="image-banner"
-            className=" w-[97vw] h-[76vh] object-cover"
-          />
-        </div>
+        <motion.section
+          ref={targetRef}
+          className=" lg:w-[95vw] lg:h-[75vh] m-auto overflow-hidden "
+        >
+          <motion.div
+            style={{
+              boxShadow: "-120px 0 70px rgba(0, 0, 0, 1)",
+              y: fadeInTextx,
+              // y: "-14%",
+            }}
+            className=" lg:w-[95vw] lg:h-[80vh]"
+          >
+            {" "}
+            <img
+              src={pageData.image1}
+              alt="image-banner"
+              className=" w-[97vw] h-[76vh] object-cover"
+            />
+          </motion.div>
+        </motion.section>
 
         <div className="  flex flex-col gap-4 text-lg lg:w-[28vw] m-auto mt-20">
           <p>{textData.text1} </p>

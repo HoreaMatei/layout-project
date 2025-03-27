@@ -3,6 +3,7 @@ import Title from "../../components/Title";
 import BannersSection from "../../sections/BannersSection";
 import MovingTextComponent from "../../components/MovingTextComponent";
 import ContactComponent from "../../components/ContactComponent";
+import BannersSectionWorks from "../../sections/BnnerSectionWorks";
 
 const Works: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const Works: React.FC = () => {
 
       <div className="relative  bg-black">
         <div className="relative w-screen bg-black pt-40">
-          <BannersSection
+          <BannersSectionWorks
             subClassName="w-[38vw] h-[70vh] "
             className="w-[78vw]   m-auto grid grid-cols-2 "
           />
