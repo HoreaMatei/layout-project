@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../../components/Title";
-import { li } from "framer-motion/client";
+
 import MovingTextComponent from "../../components/MovingTextComponent";
 import ContactComponent from "../../components/ContactComponent";
 

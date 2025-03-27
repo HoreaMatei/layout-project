@@ -14,6 +14,8 @@ import DynamicProjectsPage from "./projects/DynamicProjectsPage";
 import Plans from "./pages/plans/Plans";
 import GrowthPackage from "./pages/plans/GrowthPackage";
 import Contact from "./pages/Contact";
+import DynamicBlogPage from "./pages/blogs/DynamicBlogPage";
+import BlogsMainPage from "./pages/blogs/BlogsMainPage";
 
 const App: React.FC = () => {
   return (
@@ -24,6 +26,8 @@ const App: React.FC = () => {
         <Route path="/about" element={<About />} />
         <Route path="/works" element={<Works />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blogs" element={<BlogsMainPage />} />
+        <Route path="/blogs/:pageId" element={<DynamicBlogPage />} />
         <Route path="/growth-package" element={<GrowthPackage />} />
 
         <Route path="/projects/creative-pulse" element={<CreativePulse />} />

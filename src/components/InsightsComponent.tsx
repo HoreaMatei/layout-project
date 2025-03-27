@@ -3,18 +3,18 @@ import { useInsight } from "../hooks/useInsightContext";
 import ArrowUpButton from "./ArrowUpButton";
 
 const InsightsComponent: React.FC = () => {
-  const { title, readTime, date, imgUrl } = useInsight();
+  const { title, readTime, date, imgUrl, linkTo } = useInsight();
 
   return (
     <div className="w-[80vw]">
       <div className=" relative flex flex-col gap-6 group cursor-pointer ">
-        <div className="lg:w-[26vw] overflow-hidden  ">
+        <a href={linkTo} className="lg:w-[26vw] overflow-hidden  ">
           <img
             src={imgUrl}
             alt="image"
             className=" transition-transform duration-300 ease-in-out transform hover:scale-110 overflow-hidden lg:w-[26vw] object-cover lg:h-[300px]"
           />
-        </div>
+        </a>
         <div className=" flex flex-col gap-2">
           {" "}
           <div className="flex flex-row gap-5 text-[#979797] ">
