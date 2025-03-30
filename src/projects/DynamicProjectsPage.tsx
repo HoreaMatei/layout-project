@@ -203,9 +203,12 @@ const DynamicProjectsPage: React.FC = () => {
 
   return (
     <div className="text-white tracking-wider">
-      <Title className="lg:text-[26vh] h-[50vh]" text={pageData.title} />
+      <Title
+        className=" text-5xl sm:text-[26vh] h-[30vh] sm:h-[50vh]"
+        text={pageData.title}
+      />
 
-      <div className="bg-black w-screen relative pt-3">
+      <div className="bg-black  h-[80vh] sm:h-[100vh] w-screen relative pt-3">
         <div
           style={{
             backgroundImage: `url(${pageData.image1})`,
@@ -214,24 +217,27 @@ const DynamicProjectsPage: React.FC = () => {
             backgroundRepeat: "no-repeat",
           }}
           className={clsx(
-            " brightness-75 w-[90vw] h-[70vh] text-white flex justify-center flex-col align-middle items-center gap-8 m-auto mt-4    relative"
+            " brightness-85 w-[90vw] h-[70vh] text-white flex justify-center flex-col align-middle items-center gap-8 m-auto mt-4    relative"
           )}
         >
-          <p className="absolute left-10 top-10 text-xl">{pageData.leftText}</p>
-          <p className="absolute top-10 text-xl right-10">
+          <p className="sm:absolute left-10 top-10 text-lg sm:text-xl">
+            {pageData.leftText}
+          </p>
+          <p className="sm:absolute top-10 text-lg sm:text-xl right-10">
             {pageData.rightText}{" "}
           </p>
         </div>
       </div>
+
       <div className="w-screen bg-black relative  ">
-        <div className="w-[35vw] flex flex-col gap-20 h-[80vh] justify-center relative bg-black m-auto">
-          <div className="flex flex-col gap-5 text-xl">
+        <div className=" w-[90vw] sm:w-[35vw]  flex flex-col gap-8 sm:gap-20 h-fit sm:h-[80vh] justify-center relative bg-black m-auto">
+          <div className="flex flex-col gap-5 text-lg sm:text-xl">
             <div className="text-2xl">Objective</div>
             <p>{pageData.objective}</p> <p>{pageData.description}</p>
           </div>
           <div className=" text-xl flex flex-col gap-4">
             <h1 className="text-2xl">What we've done</h1>
-            <ol className="list-decimal list-inside space-y-4">
+            <ol className="list-decimal text-lg sm:text-xl list-inside space-y-4">
               {pageData.points.map((point, index) => (
                 <li key={index}>{point}</li>
               ))}
@@ -240,7 +246,7 @@ const DynamicProjectsPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="w-screen h-[80vh] pb-28 pt-10 bg-black relative ">
+      <div className="w-screen h-[80vh] pb-2 sm:pb-28 pt-2 sm:pt-10 bg-black relative ">
         <div
           style={{
             backgroundImage: `url(${pageData.image2})`,
@@ -255,10 +261,10 @@ const DynamicProjectsPage: React.FC = () => {
       </div>
 
       <div className="w-screen bg-black relative ">
-        <div className="pt-20  w-[35vw] flex flex-col gap-10 h-[80vh] justify-center relative bg-black m-auto">
+        <div className="pt-2 sm:pt-20  w-[90vw]  sm:w-[35vw] flex flex-col gap-10 h-fit sm:h-[80vh] justify-center relative bg-black m-auto">
           <div className="flex flex-col gap-5">
             <h1 className="text-3xl ">Creative Process</h1>
-            <ol className="list-decimal list-inside space-y-4 text-xl">
+            <ol className="list-decimal list-inside space-y-4 text-lg sm:text-xl">
               {pageData.creativeProcess.map((process, i) => (
                 <li key={i}>{process}</li>
               ))}
@@ -266,11 +272,11 @@ const DynamicProjectsPage: React.FC = () => {
           </div>
           <div className="flex flex-col gap-4">
             <h1 className="text-3xl ">Results</h1>
-            <p className="text-xl">{pageData.results}</p>
+            <p className="text-lg sm:text-xl">{pageData.results}</p>
           </div>
           <div className="flex flex-col gap4">
             <h1 className="text-3xl">Conclusion</h1>
-            <p className="text-xl">{pageData.conclusion}</p>
+            <p className="mt-2 text-lg sm:text-xl">{pageData.conclusion}</p>
           </div>
         </div>
       </div>
