@@ -13,7 +13,7 @@
 }
 
 .nav_img {
-  background-color: white;
+  background-color: transparent;
   filter: invert(1) brightness(2);
   height: 40px;
   margin-top: 10px;

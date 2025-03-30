@@ -58,10 +58,10 @@ export const Landing: React.FC = () => {
       <HeaderImagesDiv />
 
       <motion.div
-        className=" w-[100vw] relative z-10  flex flex-col gap-[20vw]  align-baseline justify-center items-center"
+        className="  w-[100vw] relative z-10  flex flex-col gap-[20vw]  align-baseline justify-center items-center"
         style={{ y: textY }}
       >
-        <div className="relative items-center justify-center  flex flex-row w-[100vw] gap-[20vw] ">
+        <div className=" relative items-center justify-center hidden sm:flex flex-row w-[100vw] sm:gap-[20vw] ">
           <img
             src="./bgpic4.jpg"
             alt="pic"
@@ -76,7 +76,7 @@ export const Landing: React.FC = () => {
         </div>
         <motion.div
           style={{ y: descriptionY }}
-          className="bg-black pt-24 z-20 ml-200 relative w-[100vw] h-[90vh] text-center overflow-hidden"
+          className=" bg-black pt-10 sm:pt-24 z-20 ml-200 relative w-[100vw] h-[90vh] text-center overflow-hidden"
         >
           <AboutUsComponent />
 
@@ -86,7 +86,7 @@ export const Landing: React.FC = () => {
               x: fadeInDivx,
               y: "-20%",
             }}
-            className="lg:w-[45vw] m-auto relative z-40 h-[40vh] mt-[-30vh]  bg-black"
+            className="hidden sm:block lg:w-[45vw] m-auto relative z-40 h-[40vh] mt-1 lg:mt-[-30vh]  bg-black"
           ></motion.div>
           <Button linkTo="/about" text="about us" className="mt-[-80px] " />
 
