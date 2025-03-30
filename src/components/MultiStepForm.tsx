@@ -31,7 +31,7 @@ export default function MultiStepForm() {
   };
 
   return (
-    <form className="font-thin lg:w-[40vw]  mx-auto uppercase shadow-lg rounded-lg space-y-4">
+    <form className="font-thin w-[90vw] sm:w-[40vw]  mx-auto uppercase shadow-lg rounded-lg space-y-4">
       <div className="uppercase ">
         <label className="block font-semibold">Full Name</label>
         <input
@@ -118,7 +118,7 @@ export default function MultiStepForm() {
 
       <button
         type="submit"
-        className="w-full uppercase bg-blue-700 text-white p-2 hover:bg-blue-800 cursor-pointer"
+        className="w-full uppercase bg-blue-700 text-white p-2 hover:bg-blue-800 cursor-pointer font-medium"
       >
         Submit
       </button>

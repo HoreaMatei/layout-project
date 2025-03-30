@@ -36,7 +36,7 @@ const ExpertiseText: React.FC = () => {
           ></motion.div>
         </div>
       </div>
-      <Button text="Work with us" />
+      <Button linkTo="/contact" text="Work with us" />
     </motion.section>
   );
 };

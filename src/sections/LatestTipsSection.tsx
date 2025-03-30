@@ -41,7 +41,7 @@ const LatestTipsSection: React.FC = () => {
         <div className=" flex flex-col items-center gap-20">
           <Button linkTo="/blogs" text="view all" className="mt-12 " />
 
-          <div className="flex flex-row w-[82vw]">
+          <div className="flex flex-row gap-4 w-[82vw]">
             {articles.map((article, index) => (
               <InsightProvider key={index} value={article}>
                 <InsightsComponent />

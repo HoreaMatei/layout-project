@@ -6,7 +6,7 @@ const InsightsComponent: React.FC = () => {
   const { title, readTime, date, imgUrl, linkTo } = useInsight();
 
   return (
-    <div className="w-[80vw]">
+    <div className="">
       <div className=" relative flex flex-col gap-6 group cursor-pointer ">
         <a href={linkTo} className="lg:w-[26vw] overflow-hidden  ">
           <img

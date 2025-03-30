@@ -40,18 +40,18 @@ const AnimatedImageGrid: React.FC = () => {
   }, []);
 
   return (
-    <div className="  z-50 grid grid-cols-4 grid-rows-2 gap-5 text-center gap-y-14 w-[90vw] max-w-4xl ">
+    <div className="  z-50 grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 gap-1 sm:gap-5 text-center gap-y-14 w-screen sm:w-[90vw] max-w-4xl ">
       {activeIndexes.map((index, i) => (
         <div
           key={i}
-          className="relative flex justify-center items-center w-full h-12 overflow-hidden text-center "
+          className="relative flex justify-center items-center w-full h-14 sm:h-12 overflow-hidden text-center "
         >
           <AnimatePresence mode="popLayout">
             <motion.img
               key={index}
               src={images[index]}
               alt={`Image ${index + 1}`}
-              className="gridImage absolute left-15 inset-0 w-[100px] h-full object-cover"
+              className="gridImage absolute left-6 sm:left-15 inset-0 w-[120px] sm:w-[100px] h-full object-cover"
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: "0%", opacity: 1 }}
               exit={{ y: "-100%", opacity: 0 }}

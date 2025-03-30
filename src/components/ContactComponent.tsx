@@ -15,11 +15,11 @@ const DataArray = [
   {
     category: "Main",
     items: [
-      { name: "Home" },
-      { name: "Work" },
-      { name: "About" },
-      { name: "Blog" },
-      { name: "Plans" },
+      { name: "Home", link: "/" },
+      { name: "Work", link: "/works" },
+      { name: "About", link: "/about" },
+      { name: "Blog", link: "/blogs" },
+      { name: "Plans", link: "/plans" },
     ],
   },
   {
@@ -44,9 +44,9 @@ const DataArray = [
 
 const ContactComponent: React.FC = () => {
   return (
-    <div className="flex flex-row tracking-wider ">
-      <div className=" w-[100vw] p-10 flex flex-row">
-        <div className="flex flex-row w-[20vw] m-auto gap-20 ">
+    <div className="flex flex-col sm:flex-row tracking-wider ">
+      <div className=" w-[100vw] p-10 flex flex-col sm:flex-row">
+        <div className="flex flex-col sm:flex-row w-[20vw] sm:m-auto gap-5 sm:gap-20 ">
           {DataArray.map((group, index) => (
             <div key={index} className="flex flex-col gap-1.5">
               <h1 className="text-2xl text-stone-500 mb-4">{group.category}</h1>
@@ -55,7 +55,7 @@ const ContactComponent: React.FC = () => {
                   target="blank"
                   href={item.link ?? "#"}
                   key={subIndex}
-                  className="relative text-2xl group whitespace-nowrap cursor-pointer  "
+                  className="relative  text-lg sm:text-2xl group whitespace-nowrap cursor-pointer  "
                 >
                   {item.name}
                   <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
@@ -64,7 +64,10 @@ const ContactComponent: React.FC = () => {
             </div>
           ))}
         </div>
-        <a className="lg:w-[20vw] text-4xl m-auto" href="#">
+        <a
+          className="lg:w-[20vw] text-2xl sm:text-4xl mt-5 sm:mt-0 m-auto"
+          href="#"
+        >
           Back to Top
         </a>{" "}
       </div>
