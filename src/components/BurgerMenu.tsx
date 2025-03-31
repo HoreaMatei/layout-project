@@ -47,7 +47,7 @@ const BurgerMenu: React.FC = () => {
         >
           <ul className="flex flex-col items-start space-y-0 text-lg tracking-wider p-4">
             <li>
-              <a href="#" className="block w-full text-center py-1 ">
+              <a href="/home" className="block w-full text-center py-1 ">
                 Home
               </a>
             </li>
