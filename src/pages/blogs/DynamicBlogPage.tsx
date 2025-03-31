@@ -92,7 +92,7 @@ const data: PageData[] = [
     title: "Best Practices for Blogging",
   },
 ];
-const DynamicBlogPage = () => {
+const DynamicBlogPage: React.FC = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,

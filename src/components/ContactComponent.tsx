@@ -1,10 +1,10 @@
 import "./ContactComp.css";
 import React from "react";
 
-interface DataItem {
-  name: string;
-  link?: string;
-}
+// interface DataItem {
+//   name: string;
+//   link?: string;
+// }
 
 const DataArray = [
   {
