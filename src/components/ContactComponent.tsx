@@ -25,9 +25,9 @@ const DataArray = [
   {
     category: "Legal",
     items: [
-      { name: "Style Guide" },
-      { name: "Licensing" },
-      { name: "Changelog" },
+      { name: "Style Guide", link: "/style" },
+      { name: "Licensing", link: "/licensing" },
+      { name: "Changelog", link: "/changelog" },
     ],
   },
   {
