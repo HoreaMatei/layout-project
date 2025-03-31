@@ -11,7 +11,7 @@ const Works: React.FC = () => {
       <Title className="text-[28vw] z-20  h-[30vh] sm:h-[90vh]" text="works" />
 
       <div className="relative  bg-black">
-        <div className="relative w-screen bg-black pt-40">
+        <div className="relative w-screen bg-black pt-5 sm:pt-40">
           <BannersSectionWorks
             subClassName="w-[90vw]  sm:w-[38vw] h-[70vh] "
             className="w-screen  sm:w-[78vw]   m-auto flex flex-col sm:grid grid-cols-2 "
