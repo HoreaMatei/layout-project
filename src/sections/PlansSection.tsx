@@ -10,7 +10,7 @@ const PlansSection: React.FC = () => {
   return (
     <div className="lg:mt-40 relative  ">
       {plansImagesArray.map((imgUrl, index) => (
-        <div className="sticky top-0">
+        <div className="relative sm:sticky top-0">
           <Plan key={index} imgUrl={imgUrl} index={index} />
         </div>
       ))}

@@ -27,12 +27,12 @@ const WorkingWithSection: React.FC = () => {
         ref={targetRef}
         className="w-[70vw] border-b-1 text-white relative m-auto mt-10 "
       >
-        <p className="  text-white w-[60vw] text-center text-8xl m-auto mb-24">
+        <p className="  text-white  sm:w-[60vw] text-center text-4xl  sm:text-8xl m-auto mb-10 sm:mb-24">
           "Working with LINE Studio was an exceptional experience from start to
           finish."
         </p>
 
-        <div className="absolute top-0 left-0 w-[70vw] m-auto overflow-hidden">
+        <div className="absolute top-0 left-0 w-[90vw] sm:w-[70vw] m-auto overflow-hidden">
           <motion.div
             style={{
               boxShadow: "-120px 0 70px rgba(0, 0, 0, 1)",

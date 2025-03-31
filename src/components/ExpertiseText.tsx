@@ -18,10 +18,10 @@ const ExpertiseText: React.FC = () => {
   return (
     <motion.section
       ref={targetRef}
-      className="flex flex-col  items-center justify-between h-[20vh] "
+      className="flex flex-col relative   items-center justify-between pb-20 sm:pb-0 h-[60vh] sm:h-[20vh] "
     >
       <div className="relative lg:w-[40vw]">
-        <p className="text-white text-4xl lg:w-[40vw] text-center">
+        <p className="text-white text-2xl sm:text-4xl mt-30 sm:mt-10 w-[90vw] sm:w-[40vw] text-center">
           Our expertise is in designing visuals that effectively connect with
           the target audience.
         </p>

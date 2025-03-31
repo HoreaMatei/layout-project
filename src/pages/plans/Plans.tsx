@@ -55,14 +55,17 @@ const packages = [
 const Plans: React.FC = () => {
   return (
     <div className="tracking-wider">
-      <Title className="h-[90vh] text-[48vh]" text="Plans" />
+      <Title
+        className=" text-[18vh] sm:text-[48vh] h-[30vh] sm:h-[90vh]"
+        text="Plans"
+      />
 
-      <div className="lg:w-screen pt-40  h-[100vh] bg-black relative">
-        <div className=" w-[93vw] justify-between m-auto h-[92vh]  flex flex-row flex-wrap ">
+      <div className="sm:w-screen pt-5 sm:pt-40  h-[100vh] bg-black relative">
+        <div className=" w-[93vw] justify-between m-auto h-fit sm:h-[92vh]  flex flex-col sm:flex-row  flex-wrap ">
           {packages.map((pkg, i) => (
             <div
               key={i}
-              className=" p-10 gap-10 flex flex-col lg:w-[30vw] border-[0.5px] border-stone-600 h-[80%]"
+              className=" p-10 gap-10 flex flex-col  sm:w-[30vw] border-[0.5px] border-stone-600 h-[80%]"
             >
               <div className="flex flex-col">
                 <div className="pb-7 flex flex-col gap-5 border-b-[0.5px] border-stone-600">
@@ -93,11 +96,11 @@ const Plans: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
 
-      <div className="pt-20 relative bg-black">
-        <MovingTextComponent />
-        <ContactComponent />
+        <div className="pt-20 relative bg-black">
+          <MovingTextComponent />
+          <ContactComponent />
+        </div>
       </div>
     </div>
   );

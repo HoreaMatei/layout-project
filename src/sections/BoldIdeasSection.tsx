@@ -4,17 +4,17 @@ import RevealOnScroll from "../Reveal-comp/RevealOnScroll";
 
 export const BoldIdeasSection: React.FC = () => {
   return (
-    <div className=" flex flex-col text-[30vh] text-center  uppercase m-auto w-[94vw]">
+    <div className=" flex flex-col text-7xl  sm:text-[30vh] text-left mt-20 uppercase m-auto w-[80vw]">
       <RevealOnScroll>
         <p className="">Straight</p>
       </RevealOnScroll>
 
-      <div className=" m-auto h-[30vh] gap-10 flex flex-row items-center ">
+      <div className="ml-0  sm:m-auto sm:h-[30vh] gap-10 flex  flex-row items-center ">
         <RevealOnScroll>
           <p>to the</p>
         </RevealOnScroll>
         <img
-          className="lg:w-[28vw] lg h-[24vh]  object-cover"
+          className=" h-20 sm:w-[28vw]  sm:h-[24vh]  object-cover"
           src="/straight/head.avif"
         />
       </div>

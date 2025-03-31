@@ -55,7 +55,9 @@ const BannersSection: React.FC<BannerSectionProps> = ({
   className,
 }) => {
   return (
-    <div className={clsx(" z-40 text-center  ", className)}>
+    <div
+      className={clsx(" mt-20 sm:mt-0 z-40 text-center relative  ", className)}
+    >
       {bannersData.map((banner, index) => (
         <BannerProvider key={index} value={banner}>
           <Banner className={subClassName} />

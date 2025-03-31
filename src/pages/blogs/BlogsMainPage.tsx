@@ -2,6 +2,8 @@ import React from "react";
 import Title from "../../components/Title";
 import { InsightProvider } from "../../hooks/useInsightContext";
 import InsightsComponent from "../../components/InsightsComponent";
+import MovingTextComponent from "../../components/MovingTextComponent";
+import ContactComponent from "../../components/ContactComponent";
 
 const articles = [
   {
@@ -52,8 +54,11 @@ const articles = [
 const BlogsMainPage = () => {
   return (
     <div>
-      <Title text="blogs" className="text-[50vh] h-[90vh]" />
-      <div className="w-screen bg-black relative pt-40">
+      <Title
+        text="blogs"
+        className=" text-[18vh] sm:text-[50vh] h-[30vh] sm:h-[90vh]"
+      />
+      <div className="w-screen bg-black relative pt-5 sm:pt-40">
         <div className="w-[82vw] flex m-auto flex-wrap gap-5 ">
           {articles.map((article, index) => (
             <InsightProvider key={index} value={article}>
@@ -61,6 +66,11 @@ const BlogsMainPage = () => {
             </InsightProvider>
           ))}
         </div>
+
+        <div className="mt-10">
+          <MovingTextComponent />
+        </div>
+        <ContactComponent />
       </div>
     </div>
   );

@@ -53,7 +53,7 @@ export const Landing: React.FC = () => {
   return (
     <motion.section
       ref={targetRef}
-      className="mt-[50vh] flex h-[120vh] items-start justify-center z-0 "
+      className="mt-[50vh] flex h-[40vh] sm:h-[120vh] items-start justify-center z-0 "
     >
       <HeaderImagesDiv />
 
@@ -76,7 +76,7 @@ export const Landing: React.FC = () => {
         </div>
         <motion.div
           style={{ y: descriptionY }}
-          className=" bg-black pt-10 sm:pt-24 z-20 ml-200 relative w-[100vw] h-[90vh] text-center overflow-hidden"
+          className="hidden sm:block bg-black pt-10 sm:pt-24 z-20 ml-200 relative w-[100vw] h-fit sm:h-[90vh] text-center overflow-hidden"
         >
           <AboutUsComponent />
 
@@ -90,7 +90,7 @@ export const Landing: React.FC = () => {
           ></motion.div>
           <Button linkTo="/about" text="about us" className="mt-[-80px] " />
 
-          <div className=" w-[60vw] m-auto  h-[25vh] mt-40 flex justify-center align content-center  ">
+          <div className="w-[90vw] sm:w-[60vw] m-auto relative z-50 bg-black h-[80vh] sm:h-[25vh] sm:mt-40 flex justify-center align content-center  ">
             <AnimatedImageGrid />
           </div>
         </motion.div>

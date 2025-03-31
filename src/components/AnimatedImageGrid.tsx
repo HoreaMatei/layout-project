@@ -40,7 +40,7 @@ const AnimatedImageGrid: React.FC = () => {
   }, []);
 
   return (
-    <div className="  z-50 grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 gap-1 sm:gap-5 text-center gap-y-14 w-screen sm:w-[90vw] max-w-4xl ">
+    <div className="   z-50 grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 gap-1 sm:gap-5 text-center gap-y-14 w-[80vw] sm:w-[90vw] max-w-4xl ">
       {activeIndexes.map((index, i) => (
         <div
           key={i}

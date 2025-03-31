@@ -25,7 +25,7 @@ const Title: React.FC<TitleProps> = ({ text, className }) => {
             animate={isVisible ? { y: 0, opacity: 1 } : {}} // Move to normal position
             transition={{ duration: 0.5, ease: "easeOut" }} // Smooth transition
             className={clsx(
-              " tracking-tighter  m-auto mt-10 uppercase",
+              " tracking-tighter  m-auto mt-5 sm:mt-10 uppercase",
               className
             )}
           >

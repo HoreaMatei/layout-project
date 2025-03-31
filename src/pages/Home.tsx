@@ -11,13 +11,20 @@ import LatestTipsSection from "../sections/LatestTipsSection";
 import MovingTextComponent from "../components/MovingTextComponent";
 import ContactComponent from "../components/ContactComponent";
 import "../App.css";
+import AboutUsComponent from "../components/AboutUsComponent";
+import AnimatedImageGrid from "../components/AnimatedImageGrid";
 const Home: React.FC = () => {
   return (
     <div className="">
       <Landing />
+
+      <div className=" flex flex-col sm:hidden pt-5 relative bg-black w-[80vw] m-auto z-50">
+        <AboutUsComponent />
+        <AnimatedImageGrid />
+      </div>
       <BannersSection
         className="w-[100vw]"
-        subClassName="w-[75vw] flex flex-wrap h-[80vh] "
+        subClassName=" w-[90vw] sm:w-[75vw] flex flex-wrap h-[80vh] "
       />
       <WorkingWithSection />
 

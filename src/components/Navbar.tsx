@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import BurgerMenu from "./BurgerMenu";
 
 const Navbar = () => {
   return (
     <div className="navbar_main_div sticky top-0   ">
-      <img className="nav_img" src="/logo.avif" alt="logo" />
+      <a href="/home" className="">
+        <img className="nav_img" src="/logo.avif" alt="logo" />
+      </a>
       <div className="navigation_buttons">
         <Link className="nav-link" to="/">
           <span data-hover="Home">Home</span>
@@ -26,6 +29,8 @@ const Navbar = () => {
           <span data-hover="Cart">Cart</span>
         </Link>
       </div>
+
+      <BurgerMenu />
     </div>
   );
 };
