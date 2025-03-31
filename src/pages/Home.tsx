@@ -24,7 +24,7 @@ const Home: React.FC = () => {
       </div>
       <BannersSection
         className="w-[100vw] "
-        subClassName=" w-[90vw] sm:w-[75vw] flex flex-wrap h-[80vh] "
+        subClassName=" w-[90vw] sm:w-[75vw] flex flex-wrap h-[70vh] sm:h-[80vh] "
       />
       <WorkingWithSection />
 
