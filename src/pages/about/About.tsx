@@ -4,7 +4,7 @@ import MissionAndVisionComp from "./aboutComponents/MissionAndVisionComp";
 import ImgAndNumbersComp from "./aboutComponents/ImgAndNumbersComp";
 import ClientsComp from "./aboutComponents/ClientsComp";
 import BannerImages from "./aboutComponents/BannerImages";
-import SlidingTextComponent from "../../components/SlidingTextComponent";
+
 import OurTeamComp from "./aboutComponents/OurTeamComp";
 import MovingTextComponent from "../../components/MovingTextComponent";
 import ContactComponent from "../../components/ContactComponent";

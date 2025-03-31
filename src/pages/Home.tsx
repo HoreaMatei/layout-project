@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+
 import { Landing } from "../sections/Landing";
 import BannersSection from "../sections/BannersSection";
 import WorkingWithSection from "../sections/WorkingWithSection";
@@ -23,7 +23,7 @@ const Home: React.FC = () => {
         <AnimatedImageGrid />
       </div>
       <BannersSection
-        className="w-[100vw]"
+        className="w-[100vw] "
         subClassName=" w-[90vw] sm:w-[75vw] flex flex-wrap h-[80vh] "
       />
       <WorkingWithSection />

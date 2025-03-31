@@ -15,8 +15,6 @@ const NumbersSection: React.FC = () => {
     ["1%", "160%"]
   );
 
-  const fadeInTextx = useTransform(scrollYProgress, [0.1, 0.2], ["1%", "520%"]);
-
   return (
     <div className="flex z-50 flex-col items-center w-[100vw]  h-fit sm:h-[40vh] relative ">
       <motion.section className="w-[70vw] relative m-auto h-fit sm:h-[60vh]  items-center justify-between flex flex-col ">

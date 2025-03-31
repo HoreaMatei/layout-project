@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "../../components/Title";
-import BannersSection from "../../sections/BannersSection";
+
 import MovingTextComponent from "../../components/MovingTextComponent";
 import ContactComponent from "../../components/ContactComponent";
 import BannersSectionWorks from "../../sections/BnnerSectionWorks";

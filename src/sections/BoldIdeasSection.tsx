@@ -1,6 +1,5 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import RevealOnScroll from "../Reveal-comp/RevealOnScroll";
+import React from "react";
 
 export const BoldIdeasSection: React.FC = () => {
   return (

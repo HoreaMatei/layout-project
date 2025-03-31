@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import Banner from "../components/Banner";
+
 import { BannerProvider } from "../hooks/useBannerContext";
 import WorksBanner from "../components/WorksBanner";
 

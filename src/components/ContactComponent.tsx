@@ -6,11 +6,6 @@ interface DataItem {
   link?: string;
 }
 
-interface DataGroup {
-  category: string;
-  items: DataItem[];
-}
-
 const DataArray = [
   {
     category: "Main",

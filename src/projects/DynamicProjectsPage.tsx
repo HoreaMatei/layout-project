@@ -4,7 +4,6 @@ import clsx from "clsx";
 import MovingTextComponent from "../components/MovingTextComponent";
 import ContactComponent from "../components/ContactComponent";
 import { useParams } from "react-router-dom";
-import { li } from "framer-motion/client";
 
 type PageData = {
   id: string; // Unique ID for each page

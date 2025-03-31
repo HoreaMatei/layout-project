@@ -51,7 +51,7 @@ const articles = [
   },
 ];
 
-const BlogsMainPage = () => {
+const BlogsMainPage: React.FC = () => {
   return (
     <div>
       <Title
