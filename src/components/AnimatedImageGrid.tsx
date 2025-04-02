@@ -40,7 +40,7 @@ const AnimatedImageGrid: React.FC = () => {
   }, []);
 
   return (
-    <div className="   z-50 grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 gap-1 sm:gap-5 text-center gap-y-14 w-[80vw] sm:w-[90vw] max-w-4xl ">
+    <div className=" relative bg-black   z-50 grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 gap-1 sm:gap-5 text-center gap-y-14 w-[80vw] sm:w-[90vw] max-w-4xl ">
       {activeIndexes.map((index, i) => (
         <div
           key={i}
@@ -51,7 +51,7 @@ const AnimatedImageGrid: React.FC = () => {
               key={index}
               src={images[index]}
               alt={`Image ${index + 1}`}
-              className="gridImage absolute left-6 sm:left-15 inset-0 w-[120px] sm:w-[100px] h-full object-cover"
+              className="gridImage absolute left-4 sm:left-15 inset-0 w-[30vw] sm:w-[100px] h-full object-cover"
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: "0%", opacity: 1 }}
               exit={{ y: "-100%", opacity: 0 }}

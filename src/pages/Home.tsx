@@ -15,7 +15,7 @@ import AboutUsComponent from "../components/AboutUsComponent";
 import AnimatedImageGrid from "../components/AnimatedImageGrid";
 const Home: React.FC = () => {
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
       <Landing />
 
       <div className=" flex flex-col sm:hidden pt-5 relative bg-black w-[80vw] m-auto z-50">
