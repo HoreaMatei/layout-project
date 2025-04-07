@@ -10,29 +10,33 @@ const DataArray = [
   {
     category: "Main",
     items: [
-      { name: "Home", link: "/" },
-      { name: "Work", link: "/works" },
-      { name: "About", link: "/about" },
-      { name: "Blog", link: "/blogs" },
-      { name: "Plans", link: "/plans" },
+      { name: "Home", link: "/", target: "_self" },
+      { name: "Work", link: "/works", target: "_self" },
+      { name: "About", link: "/about", target: "_self" },
+      { name: "Blog", link: "/blogs", target: "_self" },
+      { name: "Plans", link: "/plans", target: "_self" },
     ],
   },
   {
     category: "Legal",
     items: [
-      { name: "Style Guide", link: "/style" },
-      { name: "Licensing", link: "/licensing" },
-      { name: "Changelog", link: "/changelog" },
+      { name: "Style Guide", link: "/style", target: "_self" },
+      { name: "Licensing", link: "/licensing", target: "_self" },
+      { name: "Changelog", link: "/changelog", target: "_self" },
     ],
   },
   {
     category: "Social",
     items: [
-      { name: "Instagram", link: "https://www.instagram.com" },
-      { name: "LinkedIn", link: "https://www.linkedin.com" },
-      { name: "Dribbble", link: "https://dribbble.com" },
-      { name: "Behance", link: "https://www.behance.net" },
-      { name: "Facebook", link: "https://www.facebook.com" },
+      {
+        name: "Instagram",
+        link: "https://www.instagram.com",
+        target: "_blank",
+      },
+      { name: "LinkedIn", link: "https://www.linkedin.com", target: "_blank" },
+      { name: "Dribbble", link: "https://dribbble.com", target: "_blank" },
+      { name: "Behance", link: "https://www.behance.net", target: "_blank" },
+      { name: "Facebook", link: "https://www.facebook.com", target: "_blank" },
     ],
   },
 ];
@@ -47,7 +51,7 @@ const ContactComponent: React.FC = () => {
               <h1 className="text-2xl text-stone-500 mb-4">{group.category}</h1>
               {group.items.map((item, subIndex) => (
                 <a
-                  target="blank"
+                  target={item.target}
                   href={item.link ?? "#"}
                   key={subIndex}
                   className="relative  text-lg sm:text-2xl group whitespace-nowrap cursor-pointer  "

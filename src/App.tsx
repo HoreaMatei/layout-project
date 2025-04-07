@@ -31,8 +31,7 @@ const App: React.FC = () => {
         <Route path="/growth-package" element={<GrowthPackage />} />
 
         <Route path="/projects/creative-pulse" element={<CreativePulse />} />
-        {/* 
-        <Route path="/contact" element={<Contact />} /> */}
+
         <Route path="/projects/:pageId" element={<DynamicProjectsPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         <Route path="/plans" element={<Plans />} />
